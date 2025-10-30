@@ -11,8 +11,9 @@ def random_color(discard_color = None):
     colors = ['magenta', 'green', 'black', 'blue', 'cyan']
     if(discard_color):
         colors.remove(discard_color)
-   
+    
     return choice(colors)
+    
 
 def change(x, y):
     "Change snake direction."
@@ -22,6 +23,21 @@ def change(x, y):
 def inside(head):
     "Return True if head inside boundaries."
     return -200 < head.x < 190 and -200 < head.y < 190
+
+def move_food():
+    "Move food one step randomly, staying inside boundaries."
+    # Generar movimiento aleatorio: arriba, abajo, izquierda o derecha
+    directions = [vector(10, 0), vector(-10, 0), vector(0, 10), vector(0, -10)]
+    move = choice(directions)
+    
+    # Calcular nueva posición
+    new_x = food.x + move.x
+    new_y = food.y + move.y
+    
+    # Verificar que la nueva posición esté dentro de los límites
+    if -200 < new_x < 190 and -200 < new_y < 190:
+        food.x = new_x
+        food.y = new_y
 
 def move():
     "Move snake forward one segment."
@@ -41,6 +57,8 @@ def move():
         food.y = randrange(-15, 15) * 10
     else:
         snake.pop(0)
+
+    move_food()
 
     clear()
 
