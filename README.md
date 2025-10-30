@@ -34,6 +34,9 @@ Este es el icónico juego Snake donde controlas una serpiente que crece cada vez
 - Comienzas con 1 segmento
 - Cada comida añade 1 segmento a tu serpiente
 
+## Extra:
+- En cada partida los colores de la serpiente y la comida son distintos (aleatorios)
+
 ## 🔧 Requisitos
 
 ```bash
