@@ -36,6 +36,7 @@ Este es el icónico juego Snake donde controlas una serpiente que crece cada vez
 
 ## Extra:
 - En cada partida los colores de la serpiente y la comida son distintos (aleatorios)
+- La comida se va moviendo un paso a la vez de forma aleatoria para complicar el juego
 
 ## 🔧 Requisitos
 
